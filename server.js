@@ -31,6 +31,10 @@ app.post('/createmovie', (req,res)=>{
   })
 })
 
+app.get('/createmovie', (req,res)=>{
+    res.redirect('createmovie');
+})
+
 
 app.get('/students/:id', (req, res) => {
   knex('students').where('class_id', req.params.id).then((result) => {
