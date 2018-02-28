@@ -7,13 +7,16 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 8000;
 
+//this is middleware for the json and form data being sent through
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.set('view engine', 'ejs');
 
-app.get('/style.css', (req, res) => {
-  res.sendFile(path.join(__dirname, "public/css/style.css"));
+app.get('/movies', (req, res) => {
+  knex('movies').then((results)=>{
+    res.render('index.ejs', {movies:results})
+  })
 });
 
 app.get('/', (req, res) => {
