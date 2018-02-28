@@ -20,11 +20,17 @@ app.get('/movies', (req, res) => {
   })
 });
 
-// app.get('/', (req, res) => {
-//   knex('classes').then((result) => {
-//     res.render('index', {db_array:result})
-//   })
-// });
+
+app.post('/createmovie', (req,res)=>{
+  knex('movies').insert({
+    title:req.body.title,
+    desc:req.body.desc,
+    genre:req.body.genre
+  }).then(()=>{
+    res.redirect('/movies');
+  })
+})
+
 
 app.get('/students/:id', (req, res) => {
   knex('students').where('class_id', req.params.id).then((result) => {
@@ -32,7 +38,7 @@ app.get('/students/:id', (req, res) => {
   })
 });
 
-app.post('/', (req, res) => {
+app.post('/movies', (req, res) => {
   knex('classes').insert({
     class_name: req.body.addClassName,
     class_teacher: req.body.addClassTeacher
