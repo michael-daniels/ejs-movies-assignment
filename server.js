@@ -12,18 +12,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname,"public")));
 
 app.get('/movies', (req, res) => {
   knex('movies').then((results)=>{
-    res.render('index.ejs', {movies:results})
+    res.render('index', {movies:results})
   })
 });
 
-app.get('/', (req, res) => {
-  knex('classes').then((result) => {
-    res.render('index', {db_array:result})
-  })
-});
+// app.get('/', (req, res) => {
+//   knex('classes').then((result) => {
+//     res.render('index', {db_array:result})
+//   })
+// });
 
 app.get('/students/:id', (req, res) => {
   knex('students').where('class_id', req.params.id).then((result) => {
