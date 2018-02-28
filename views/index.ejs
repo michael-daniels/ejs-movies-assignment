@@ -24,17 +24,22 @@
 
     <div class="main-div">
 
-      <% for (let i = 0; i < 3; i++) { %>
+      <% for (let i = 0; i < movies.length; i++) { %>
       <div class="movie-card">
 
         <div class="row">
 
           <div class="col-md-8 title-and-description">
-
+            <div class="movie-title"><h2><%= movies[i].title %></h2></div>
+            <div class="movie-description"><p><%= movies[i].desc %></p></div>
           </div><!--end col-md-9-->
 
           <div class="col-md-4 votes">
-
+            <div class="row">
+              <div class="upvote col-md-6"><h5>upvote</h5></div>
+              <div class="downvote col-md-6"><h5>downvote</h5></div>
+            </div><!--end row-->
+            <div class="total-votes"><p><%= movies[i].votes %></p></div>
           </div><!--end col-md-3-->
 
         </div><!-- end row-->

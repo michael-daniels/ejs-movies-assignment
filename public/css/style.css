@@ -1,3 +1,7 @@
+.row {
+  margin:0;
+  padding:0;
+}
 .wrapper {
   padding: 50px 50px 50px 50px;
   text-align: center;
@@ -11,7 +15,7 @@
   padding:25px 75px;
 }
 .movie-card {
-  min-height: 200px;
+  border: 1px gray solid;
   background-color: blue;
   overflow: hidden;
   padding: 20px 10px;
@@ -19,6 +23,12 @@
 .title-and-description {
   background-color: pink;
   min-height: 100px;
+}
+.movie-title {
+  text-align: left;
+}
+.movie-description {
+  text-align: left;
 }
 .votes {
   background-color: purple;
