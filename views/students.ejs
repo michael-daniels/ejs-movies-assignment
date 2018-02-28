@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Classes and Students</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary the-navbar">
+      <a class="navbar-brand" href="#">gClasses and Students</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <!--nav items here-->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+
+    <div class="formDiv">
+      <form method="POST">
+        <input type="text" name="addStudentName" placeholder="Student Name">
+        <input type="text" name="addStudentAge" placeholder="Age">
+        <button type="submit" id="addClassButton" class="btn">Add a Student</button>
+      </form>
+    </div>
+
+    <div class="row">
+      <% for (let i = 0; i < db_array.length; i++) { %>
+        <div class="card col-md-4">
+          <div class="class-name">
+            <h2><%= db_array[i].student_name %></h2></div>
+          <div class="class-teacher">
+            <h4><%= db_array[i].student_age %></h4></div>
+        </div>
+        <!--end card-->
+        <% } %>
+    </div>
+  </div>
+  <!--end wrapper-->
+</body>
+
+</html>
