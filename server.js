@@ -20,6 +20,9 @@ app.get('/movies', (req, res) => {
   })
 });
 
+app.get('/createmovie', (req,res)=>{
+    res.render('createmovie');
+})
 
 app.post('/createmovie', (req,res)=>{
   knex('movies').insert({
