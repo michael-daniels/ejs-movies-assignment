@@ -16,9 +16,11 @@
 
   <div class="wrapper">
 
+    <h1>EJS Movies</h1>
+
     <div class="button-div">
 
-      <button class="btn">Submit Movie</button>
+      <a href="/createmovie"><button class="btn">Submit Movie</button></a>
 
     </div>
 
@@ -36,8 +38,8 @@
 
           <div class="col-md-4 votes">
             <div class="row">
-              <div class="upvote col-md-6"><h5>upvote</h5></div>
-              <div class="downvote col-md-6"><h5>downvote</h5></div>
+              <a href="/upvote/<%= movies[i].id %>"><div class="upvote col-md-6"><h5>upvote</h5></div></a>
+              <a href="/downvote/<%= movies[i].id %>"><h5>downvote</h5></div></a>
             </div><!--end row-->
             <div class="total-votes"><p><%= movies[i].votes %></p></div>
           </div><!--end col-md-3-->

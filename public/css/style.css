@@ -1,3 +1,10 @@
+h1 {
+  color: #007bff;
+}
+h2 {
+  color: #007bff;
+}
+
 .row {
   margin:0;
   padding:0;
@@ -6,22 +13,29 @@
   padding: 50px 50px 50px 50px;
   text-align: center;
 }
+.btn {
+  width:30%;
+  background-color: #007bff;
+  color:white;
+}
 .button-div {
-  background-color: red;
+  background-color:;
   padding: 50px 0;
 }
 .main-div {
-  background-color: #f2f2f2;
+  background-color:;
   padding:25px 75px;
 }
 .movie-card {
   border: 1px gray solid;
-  background-color: blue;
+  border-radius: 5px;
+  background-color:;
   overflow: hidden;
   padding: 20px 10px;
+  margin: 25px 0;
 }
 .title-and-description {
-  background-color: pink;
+  background-color:;
   min-height: 100px;
 }
 .movie-title {
@@ -31,6 +45,10 @@
   text-align: left;
 }
 .votes {
-  background-color: purple;
+  margin-top:25px;
+  background-color:;
   min-height: 100px;
+}
+.form-div {
+  padding: 40px 0;
 }
