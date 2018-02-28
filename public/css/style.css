@@ -1,41 +1,26 @@
-nav {
-  text-align: center;
-}
 .wrapper {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding: 50px 50px 50px 50px;
+  text-align: center;
+}
+.button-div {
+  background-color: red;
+  padding: 50px 0;
+}
+.main-div {
   background-color: #f2f2f2;
-  min-height: 500px;
+  padding:25px 75px;
 }
-input {
-  width:30%;
-  height:35px;
-  border-radius: 3px;
-  border: none;
-  text-align: center;
-  color:#007bff;
+.movie-card {
+  min-height: 200px;
+  background-color: blue;
+  overflow: hidden;
+  padding: 20px 10px;
 }
-.btn {
-  color: #007bff;
+.title-and-description {
+  background-color: pink;
+  min-height: 100px;
 }
-.formDiv {
-  text-align: center;
-  margin-bottom:25px;
-}
-
-.card {
-  color:#007bff;
-  width: 90%;
-  height: 150px;
-  border: 1px solid gray;
-  min-width:200px;
-}
-.class-name {
-  margin-top:25px;
-  text-align: center;
-}
-.class-teacher {
-  text-align: center;
+.votes {
+  background-color: purple;
+  min-height: 100px;
 }

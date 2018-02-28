@@ -9,7 +9,6 @@
 </head>
 
 <body>
-  <h1>Hello</h1>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary the-navbar">
       <a class="navbar-brand the-navbar" href="#">gMovies</a>
@@ -17,6 +16,35 @@
   </header>
 
   <div class="wrapper">
+
+    <div class="button-div">
+
+      <button class="btn">Submit Movie</button>
+
+    </div>
+
+    <div class="main-div">
+
+      <% for (let i = 0; i < 3; i++) { %>
+      <div class="movie-card">
+
+        <div class="row">
+
+          <div class="col-md-8 title-and-description">
+
+          </div><!--end col-md-9-->
+
+          <div class="col-md-4 votes">
+
+          </div><!--end col-md-3-->
+
+        </div><!-- end row-->
+
+      </div><!--end movie card-->
+
+      <% } %><!--end for loop-->
+
+    </div>
 
   </div>
   <!--end wrapper-->
