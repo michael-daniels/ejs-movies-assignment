@@ -34,24 +34,29 @@ app.post('/createmovie', (req,res)=>{
   })
 })
 
+//incrementing vote by 1
 app.get('/upvote/:id', (req, res)=>{
   knex('movies').where('id', req.params.id)
   .then((results)=>{
-    console.log('FIRST RESULT: ',results);
-
     let result = results[0].votes
-    console.log('FIRST RESULT: ',result);
     knex('movies').where('id', req.params.id)
     .update({votes: result+1}).then(()=>{
       res.redirect('/movies')
-      console.log('RESULT: ',result)
-
     })
-    //console.log('RESULT: ',result)
-    //res.redirect('/movies')
   })
 })
 
+//decrementing vote by 1
+app.get('/downvote/:id', (req, res)=>{
+  knex('movies').where('id', req.params.id)
+  .then((results)=>{
+    let result = results[0].votes
+    knex('movies').where('id', req.params.id)
+    .update({votes: result-1}).then(()=>{
+      res.redirect('/movies')
+    })
+  })
+})
 
 app.get('/students/:id', (req, res) => {
   knex('students').where('class_id', req.params.id).then((result) => {
