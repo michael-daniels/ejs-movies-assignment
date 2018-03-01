@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Classes and Students</title>
+  <title>gMovies</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -38,11 +39,11 @@
 
           <div class="col-md-4 votes">
             <div class="row">
-              <a href="/upvote/<%= movies[i].id %>"><div class="upvote col-md-6"><h5>upvote</h5></div></a>
-              <a href="/downvote/<%= movies[i].id %>"><h5>downvote</h5></div></a>
+              <div class="total-votes col-md-4"><p><%= movies[i].votes %></p></div>
+              <div class="upvote col-md-4"><a href="/upvote/<%= movies[i].id %>"><h5><i class="far fa-thumbs-up"></i></h5></a></div>
+              <div class="downvote col-md-4"><a href="/downvote/<%= movies[i].id %>"><h5><i class="far fa-thumbs-down"></i></h5></a></div>
             </div><!--end row-->
-            <div class="total-votes"><p><%= movies[i].votes %></p></div>
-          </div><!--end col-md-3-->
+          </div><!--end col-md-4-->
 
         </div><!-- end row-->
 
